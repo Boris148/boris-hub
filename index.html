@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐻 Boris Hub — Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e8e8e8; min-height: 100vh; }
+  
+  .container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+  
+  .header { text-align: center; margin-bottom: 36px; }
+  .header .emoji { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 24px; font-weight: 800; color: #fff; }
+  .header p { font-size: 13px; color: #666; margin-top: 4px; }
+  
+  .section-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: #555; margin: 28px 0 12px; padding-left: 4px;
+  }
+  
+  .card {
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px; padding: 16px 18px; margin-bottom: 8px;
+    text-decoration: none; color: inherit; transition: all 0.2s;
+  }
+  .card:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); transform: translateY(-1px); }
+  
+  .card .icon { font-size: 28px; flex-shrink: 0; }
+  .card .info h3 { font-size: 15px; font-weight: 600; color: #fff; }
+  .card .info p { font-size: 12px; color: #666; margin-top: 2px; }
+  .card .arrow { margin-left: auto; color: #444; font-size: 18px; }
+  
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #4ade80; margin-top: 4px; }
+  .status .dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; }
+  .status.down .dot { background: #f87171; }
+  .status.down { color: #f87171; }
+  
+  .divider { height: 1px; background: rgba(255,255,255,0.04); margin: 8px 0; }
+  
+  .footer { text-align: center; margin-top: 40px; font-size: 11px; color: #333; }
+
+  /* Pulse animation for live indicators */
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .pulse { animation: pulse 2s infinite; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="emoji">🐻</div>
+    <h1>Boris Hub</h1>
+    <p>Jeremy Garcia — Command Center</p>
+  </div>
+
+  <!-- Dashboards -->
+  <div class="section-label">📊 Dashboards</div>
+  
+  <a href="https://firmware-successfully-thumbzilla-genesis.trycloudflare.com" class="card" target="_blank">
+    <div class="icon">🧠</div>
+    <div class="info">
+      <h3>Mission Control</h3>
+      <p>Operations dashboard — tasks, team, revenue</p>
+      <div class="status"><span class="dot pulse"></span> Live</div>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a href="https://outlet-hitting-unto-ripe.trycloudflare.com" class="card" target="_blank">
+    <div class="icon">📋</div>
+    <div class="info">
+      <h3>Task Board</h3>
+      <p>Kanban board — backlog, in progress, done</p>
+      <div class="status"><span class="dot pulse"></span> Live</div>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <!-- Client Projects -->
+  <div class="section-label">📁 Client Projects</div>
+
+  <a href="https://boris148.github.io/cashflow-dept-build-plan/" class="card" target="_blank">
+    <div class="icon">💼</div>
+    <div class="info">
+      <h3>Moe Allen — GHL Build Plan</h3>
+      <p>The Cash Flow Department funnel & automation</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a href="https://boris148.github.io/aces-school-of-business/blue.html" class="card" target="_blank">
+    <div class="icon">🎓</div>
+    <div class="info">
+      <h3>ACES School of Business</h3>
+      <p>Landing page — blue version (Mariah approved)</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a href="https://boris148.github.io/aos-consulting/" class="card" target="_blank">
+    <div class="icon">🛡️</div>
+    <div class="info">
+      <h3>AOS Consulting (A2P Safe Page)</h3>
+      <p>TCR-compliant consulting page for A2P review</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <!-- Systems -->
+  <div class="section-label">⚙️ Systems & Tools</div>
+
+  <a href="https://boris148.github.io/aos-system-map/" class="card" target="_blank">
+    <div class="icon">🗺️</div>
+    <div class="info">
+      <h3>Alex System Map</h3>
+      <p>AOS voice agent architecture & integrations</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <!-- Quick Links -->
+  <div class="section-label">🔗 Quick Links</div>
+
+  <a href="https://docs.google.com/document/d/1hE5QedTB1epDvxdRwBPjb7h6s_xWxKZZ6idVmONdYHI/edit" class="card" target="_blank">
+    <div class="icon">📄</div>
+    <div class="info">
+      <h3>Moe Allen — Copy for Approval</h3>
+      <p>Client-facing messaging review doc</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a href="https://docs.google.com/document/d/1u7kYx1JwuG8nwOSuyqGQhZdTzsEDWwpt25_cCCo6LCQ/edit" class="card" target="_blank">
+    <div class="icon">📋</div>
+    <div class="info">
+      <h3>Sodiq Build Guide</h3>
+      <p>Step-by-step GHL build instructions</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <div class="footer">
+    Boris 🐻 · Social Elite Marketing Group · Updated March 24, 2026
+  </div>
+</div>
+
+</body>
+</html>
